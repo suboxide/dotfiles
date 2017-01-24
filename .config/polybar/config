@@ -8,13 +8,13 @@
 ;=====================================================
 
 [colors]
-background = #ef272822
-background-alt = #ef272822
-foreground = #f8f8f2
-foreground-alt = #a1efe4
-foreground-dim = #a1efe4
+background = #ef404552
+background-alt = #ef404552
+foreground = #b3bdcb
+foreground-alt = #b3bdcb
+foreground-dim = #b3bdcb
 primary = #383C4A
-secondary = #a1efe4
+secondary = #b3bdcb
 alert = #a1efe4
 pink = #f92672
 wit = #f8f8f2

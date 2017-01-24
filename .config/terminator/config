@@ -1,14 +1,14 @@
 [global_config]
   title_transmit_fg_color = "#ffffff"
-  title_transmit_bg_color = "#000000"
+  title_transmit_bg_color = "#1b1f20"
   title_inactive_fg_color = "#ffffff"
-  title_inactive_bg_color = "#4d4d4d"
+  title_inactive_bg_color = "#c08b61"
 
 [profiles]
   [[default]]
-    palette = "#000000:#cc0403:#19cb00:#cecb00:#001cd1:#cb1ed1:#0dcdcd:#e5e5e5:#4d4d4d:#3e0605:#23fd00:#fffd00:#0026ff:#fd28ff:#14ffff:#ffffff"
+    palette = "#1b1f20:#c1c2c2:#b4a995:#cecbca:#a09484:#a07c68:#a6aeb0:#e0dccf:#c08b61:#c2c6c8:#d8d5d1:#aac6c8:#b5c6c8:#f0b67b:#afc5c8:#c8876e"
     foreground_color = "#ffffff"
-    background_color = "#000000"
+    background_color = "#0e0e0e"
     cursor_color = "#ffffff"
 
 [layouts]

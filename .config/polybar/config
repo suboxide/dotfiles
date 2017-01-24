@@ -9,14 +9,14 @@
 
 
 [colors]
-background = #ef201b16
-background-alt = #efa07e8c
-foreground = #a09b6d
+background = #ef0e0e0e
+background-alt = #cecbca
+foreground = #ffffff
 foreground-alt = #90a090
-foreground-dim = #a1efe4
-primary = #a05841
-secondary = #a05e52
-alert = #90a090
+foreground-dim = #c1c2c2
+primary = #a07c68
+secondary = #b4a995
+alert = #e0dccf
 
 
 [global/wm]

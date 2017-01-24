@@ -1,20 +1,30 @@
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
-rofi.padding: 350
-rofi.opacity:97
+rofi.color-enabled: true
+rofi.color-window: #273238, #273238, #1e2529
+rofi.color-normal: #273238, #c1c1c1, #273238, #394249, #ffffff
+rofi.color-active: #273238, #80cbc4, #273238, #394249, #80cbc4
+rofi.color-urgent: #273238, #ff1844, #273238, #394249, #ff1844
+
+
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+!rofi.padding: 350
+!rofi.opacity:97
 ! Use extended color scheme
-rofi.color-enabled:                  true
+!rofi.color-enabled:                  true
 ! Color scheme for normal row
-rofi.color-normal:                   #ffffff,#525d76,#f5f5f5,#5294e2,#ffffff
+!rofi.color-normal:                   #ff0000,#525d76,#f5f5f5,#5294e2,#ffffff
 ! Color scheme for urgent row
-rofi.color-urgent:                   #ffffff,#dc322f,#f5f5f5,#5294e2,#dc322f
+!rofi.color-urgent:                   #00ff00,#dc322f,#f5f5f5,#5294e2,#dc322f
 ! Color scheme for active row
-rofi.color-active:                   #ffffff,#c2cad0,#f5f5f5,#5294e2,#c2cad0
+!rofi.color-active:                   #ffff00,#c2cad0,#f5f5f5,#5294e2,#c2cad0
 ! Color scheme window
-rofi.color-window:                   #ffffff,#f5f5f5
+!rofi.color-window:                   #0000ff,#f5f5f5
 ! Separator style (none, dash, solid)
-rofi.separator-style:                solid
+!rofi.separator-style:                solid
 
 ! make otf / ttf fonts look pretty.  does not matter if you are using a bitmap font.
 Xft.autohint: 0
@@ -29,33 +39,33 @@ Xft.rgba: rgb
 *font: xft:Terminus:pixelsize=10
 *.letterSpace: -2
 
-*.background: [70]#0e0e0e
+*.background: #0e0e0e
 *.foreground: #ffffff
-*.cursorColor: #e0dccf
+*.cursorColor: #31b29b
 
 ! black
-*.color0: #1b1f20
-*.color8: #c08b61
+*.color0: #0b0f20
+*.color8: #215480
 ! red
-*.color1: #c1c2c2
-*.color9: #c2c6c8
+*.color1: #3284a0
+*.color9: #a050c8
 ! green
-*.color2: #b4a995
-*.color10: #d8d5d1
+*.color2: #365fa0
+*.color10: #8c50c8
 ! yellow
-*.color3: #cecbca
-*.color11: #aac6c8
+*.color3: #42a07c
+*.color11: #2cadc8
 ! blue
-*.color4: #a09484
-*.color12: #b5c6c8
+*.color4: #5384a0
+*.color12: #2dc8b7
 ! magenta
-*.color5: #a07c68
-*.color13: #f0b67b
+*.color5: #4740a0
+*.color13: #7184c8
 ! cyan
-*.color6: #a6aeb0
-*.color14: #afc5c8
+*.color6: #41a08e
+*.color14: #8d66c8
 ! white
-*.color7: #e0dccf
-*.color15: #c8876e
+*.color7: #31b29b
+*.color15: #2fc8c4
 ! underline when default
-*.colorUL: #e0dccf
+*.colorUL: #31b29b

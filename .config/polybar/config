@@ -8,20 +8,14 @@
 ;=====================================================
 
 [colors]
-background = #ef272822
-background-alt = #ef272822
-foreground = #f8f8f2
-foreground-alt = #a1efe4
+background = #ef201b16
+background-alt = #efa07e8c
+foreground = #a09b6d
+foreground-alt = #90a090
 foreground-dim = #a1efe4
-primary = #383C4A
-secondary = #a1efe4
-alert = #a1efe4
-pink = #f92672
-wit = #f8f8f2
-
-;2679db blue
-;fdbd79 orange
-;fc84c9 pink
+primary = #a05841
+secondary = #a05e52
+alert = #90a090
 
 
 [global/wm]
@@ -70,7 +64,7 @@ modules-right = wlan date volume backlight powermenu
 tray-position = right
 tray-padding = 5
 ;tray-transparent = true
-tray-background = #ef272822
+tray-background = ${colors.background}
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -307,7 +301,7 @@ format-connected = <ramp-signal> <label-connected>
 ;format-connected = <label-connected>
 format-connected-underline = ${colors.secondary}
 ;format-disconnected-underline = ${self.format-connected-underline}
-format-disconnected-underline = ${colors.pink}
+format-disconnected-underline = ${colors.secondary}
 
 label-connected = %essid%
 label-disconnected = %ifname% disconnected
@@ -453,9 +447,9 @@ type = custom/menu
 label-open =  
 label-open-foreground = ${colors.secondary}
 label-close =  
-label-close-foreground = ${colors.pink}
+label-close-foreground = ${colors.secondary}
 label-separator = |
-label-separator-foreground = ${colors.pink}
+label-separator-foreground = ${colors.secondary}
 
 menu-0-0 = reboot
 menu-0-0-exec = systemctl reboot

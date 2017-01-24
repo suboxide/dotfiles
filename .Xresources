@@ -1,54 +1,62 @@
-! Rofi
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
 rofi.padding: 350
 rofi.opacity:97
-rofi.color-enabled: true
-rofi.color-window: #404552, #404552, #282a2e
-rofi.color-normal: #404552, #b3bdcb, #404552, #282a2e, #b3bdcb
-rofi.color-active: #404552, #5294e2, #404552, #282a2e, #5294e2
-rofi.color-urgent: #404552, #cc575d, #404552, #282a2e, #cc575d
+! Use extended color scheme
+rofi.color-enabled:                  true
+! Color scheme for normal row
+rofi.color-normal:                   #ffffff,#525d76,#f5f5f5,#5294e2,#ffffff
+! Color scheme for urgent row
+rofi.color-urgent:                   #ffffff,#dc322f,#f5f5f5,#5294e2,#dc322f
+! Color scheme for active row
+rofi.color-active:                   #ffffff,#c2cad0,#f5f5f5,#5294e2,#c2cad0
+! Color scheme window
+rofi.color-window:                   #ffffff,#f5f5f5
+! Separator style (none, dash, solid)
+rofi.separator-style:                solid
 
-! Xft
-Xft.antialias: 1
+! make otf / ttf fonts look pretty.  does not matter if you are using a bitmap font.
 Xft.autohint: 0
-Xft.dpi: 96
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintslight
 Xft.hinting: 1
-Xft.hintstyle: hintfull
-Xft.lcdfilter: lcddefault
+Xft.antialias: 1
 Xft.rgba: rgb
 
 ! special
-*.foreground:   #f8f8f2
-*.background:   #272822
-*.cursorColor:  #f8f8f2
+*.foreground:   #b3bdcb
+*.background:   #404552
+*.cursorColor:  #b3bdcb
 
 ! black
-*.color0:       #272822
-*.color8:       #75715e
+*.color0:       #404552
+*.color8:       #2a303b
 
 ! red
-*.color1:       #f92672
-*.color9:       #f92672
+*.color1:       #cc575d
+*.color9:       #a3464a
 
 ! green
-*.color2:       #a6e22e
-*.color10:      #a6e22e
+*.color2:       #2679db
+*.color10:      #75a9e8
 
 ! yellow
-*.color3:       #f4bf75
-*.color11:      #f4bf75
+*.color3:       #b3bdcb
+*.color11:      #cad1db
 
 ! blue
-*.color4:       #66d9ef
-*.color12:      #66d9ef
+*.color4:       #5294e2
+*.color12:      #97bfee
 
 ! magenta
-*.color5:       #ae81ff
-*.color13:      #ae81ff
+*.color5:       #404552
+*.color13:      #686d79
 
 ! cyan
-*.color6:       #a1efe4
-*.color14:      #a1efe4
+*.color6:       #b3bdcb
+*.color14:      #383c4a
 
 ! white
-*.color7:       #f8f8f2
-*.color15:      #f9f8f5
+*.color7:       #e1e5ea
+*.color15:      #ffffff

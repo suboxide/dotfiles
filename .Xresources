@@ -24,39 +24,38 @@ Xft.hinting: 1
 Xft.antialias: 1
 Xft.rgba: rgb
 
-! special
-*.foreground:   #b3bdcb
-*.background:   #404552
-*.cursorColor:  #b3bdcb
+*faceName: Terminus
+*faceSize: 10
+*font: xft:Terminus:pixelsize=10
+URxvt*.letterSpace: -2
+
+URxvt*.background: [70]#0e0e0e
+URxvt*.foreground: #ffffff
+URxvt*.cursorColor: #a09b6d
 
 ! black
-*.color0:       #404552
-*.color8:       #2a303b
-
+URxvt*.color0: #201b16
+URxvt*.color8: #728066
 ! red
-*.color1:       #cc575d
-*.color9:       #a3464a
-
+URxvt*.color1: #a07e8c
+URxvt*.color9: #c89859
 ! green
-*.color2:       #2679db
-*.color10:      #75a9e8
-
+URxvt*.color2: #a05e52
+URxvt*.color10: #c87e45
 ! yellow
-*.color3:       #b3bdcb
-*.color11:      #cad1db
-
+URxvt*.color3: #90a090
+URxvt*.color11: #c8a3c0
 ! blue
-*.color4:       #5294e2
-*.color12:      #97bfee
-
+URxvt*.color4: #7a82a0
+URxvt*.color12: #9eb1c8
 ! magenta
-*.color5:       #404552
-*.color13:      #686d79
-
+URxvt*.color5: #a05841
+URxvt*.color13: #c88989
 ! cyan
-*.color6:       #b3bdcb
-*.color14:      #383c4a
-
+URxvt*.color6: #899da0
+URxvt*.color14: #a9a6c8
 ! white
-*.color7:       #e1e5ea
-*.color15:      #ffffff
+URxvt*.color7: #a09b6d
+URxvt*.color15: #c8a26a
+! underline when default
+URxvt*.colorUL: #a09b6d

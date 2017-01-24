@@ -233,13 +233,28 @@ bindsym $mod+w exec rofi -show run -eh 2 -fullscreen -sidebar-mode
 #bindsym $mod+d exec rofi -show run -width 900 -fg "#eceff1" -bg "#263238" -hlfg "#AFE28A" -hlbg "#263238" -bc "#37474F" -location 0 -lines 8 -bw 0 -font "firasans 12" -padding 50 -separator-style none -opacity 90 -run-list-command ". /home/capuno/i3-things/scripts/alias.sh" -run-command "/bin/bash -i -c '{cmd}'"
 
 
+set $background #201b16
+set $foreground #a09b6d
+set $gray       #728066
+set $primary    #a05841
+set $secondary  #a05e52
+set $tertiary   #a07e8c
+set $warning    #90a090
+
+
+# colors                BORDER      BACKGROUND TEXT        INDICATOR
+client.focused          $primary    $primary   $background $primary
+client.focused_inactive $background $primary   $foreground $background
+client.unfocused        $gray       $gray      $background $secondary
+client.urgent           $warning    $warning   $foreground $warning
+
 # class                 border  backgr. text    indicator
 #client.unfocused       #272C33F0 #272C33F0 #cccccc #272C33F0
 
-client.focused          #ae81ff #a1efe4 #ae81ff #ae81ff
-client.focused_inactive #ae81ff #a1efe4 #ae81ff #ae81ff
-client.unfocused        #ae81ff #f8f8f2 #ae81ff #ae81ff
-client.urgent           #ae81ff #f92672 #ae81ff #ae81ff
+#client.focused          #ae81ff #a1efe4 #ae81ff #ae81ff
+#client.focused_inactive #ae81ff #a1efe4 #ae81ff #ae81ff
+#client.unfocused        #ae81ff #f8f8f2 #ae81ff #ae81ff
+#client.urgent           #ae81ff #f92672 #ae81ff #ae81ff
 
 #gaps
 new_window pixel

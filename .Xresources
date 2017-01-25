@@ -2,29 +2,10 @@
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
-rofi.color-window: #273238, #273238, #1e2529
-rofi.color-normal: #273238, #c1c1c1, #273238, #394249, #ffffff
-rofi.color-active: #273238, #80cbc4, #273238, #394249, #80cbc4
-rofi.color-urgent: #273238, #ff1844, #273238, #394249, #ff1844
-
-
-! ------------------------------------------------------------------------------
-! ROFI Color theme
-! ------------------------------------------------------------------------------
-!rofi.padding: 350
-!rofi.opacity:97
-! Use extended color scheme
-!rofi.color-enabled:                  true
-! Color scheme for normal row
-!rofi.color-normal:                   #ff0000,#525d76,#f5f5f5,#5294e2,#ffffff
-! Color scheme for urgent row
-!rofi.color-urgent:                   #00ff00,#dc322f,#f5f5f5,#5294e2,#dc322f
-! Color scheme for active row
-!rofi.color-active:                   #ffff00,#c2cad0,#f5f5f5,#5294e2,#c2cad0
-! Color scheme window
-!rofi.color-window:                   #0000ff,#f5f5f5
-! Separator style (none, dash, solid)
-!rofi.separator-style:                solid
+rofi.color-window: #ffffff, #ffffff, #ffffff
+rofi.color-normal: #ffffff, #707070, #ffffff, #a1d569, #707070
+rofi.color-active: #ffffff, #5dc7ea, #ffffff, #909090, #5dc7ea
+rofi.color-urgent: #ffffff, #ed5466, #ffffff, #909090, #ed5466
 
 ! make otf / ttf fonts look pretty.  does not matter if you are using a bitmap font.
 Xft.autohint: 0
@@ -39,33 +20,39 @@ Xft.rgba: rgb
 *font: xft:Terminus:pixelsize=10
 *.letterSpace: -2
 
-*.background: #0e0e0e
-*.foreground: #ffffff
-*.cursorColor: #31b29b
+! special
+*.foreground:   #707070
+*.background:   #ffffff
+*.cursorColor:  #707070
 
 ! black
-*.color0: #0b0f20
-*.color8: #215480
+*.color0:       #d3d3d3
+*.color8:       #b3b3b3
+
 ! red
-*.color1: #3284a0
-*.color9: #a050c8
+*.color1:       #ef6b7b
+*.color9:       #ed5466
+
 ! green
-*.color2: #365fa0
-*.color10: #8c50c8
+*.color2:       #a1d569
+*.color10:      #afdb80
+
 ! yellow
-*.color3: #42a07c
-*.color11: #2cadc8
+*.color3:       #f59335
+*.color11:      #f59335
+
 ! blue
-*.color4: #5384a0
-*.color12: #2dc8b7
+*.color4:       #4ec2e8
+*.color12:      #5dc7ea
+
 ! magenta
-*.color5: #4740a0
-*.color13: #7184c8
+*.color5:       #fec7cd
+*.color13:      #d2a4b4
+
 ! cyan
-*.color6: #41a08e
-*.color14: #8d66c8
+*.color6:       #95c1c0
+*.color14:      #75a1a0
+
 ! white
-*.color7: #31b29b
-*.color15: #2fc8c4
-! underline when default
-*.colorUL: #31b29b
+*.color7:       #707070
+*.color15:      #909090

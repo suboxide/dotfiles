@@ -35,7 +35,7 @@ bindsym $mod+F4 kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+j focus left
@@ -124,47 +124,47 @@ set $workspace9 9
 set $workspace10 10
 
 # Common apps are sorted by workspace
-assign [class="^Terminator"] → $workspace10
-assign [class="^Firefox"] → $workspace2
-assign [class="^Google Play Music Desktop Player"] → $workspace9
+#assign [class="^Terminator"] → $workspace10
+#assign [class="^Firefox"] → $workspace2
+#assign [class="^Google Play Music Desktop Player"] → $workspace9
 
 # Floating windows should have a border and titlebar (not working?)
-new_float normal
+##new_float normal
 
 # Correct handling of floating dialogs
 # https://wiki.archlinux.org/index.php/i3#Correct_handling_of_floating_dialogs
-for_window [window_role="pop-up"]      floating enable border normal
-for_window [window_role="task_dialog"] floating enable border normal
+##for_window [window_role="pop-up"]      floating enable border normal
+##for_window [window_role="task_dialog"] floating enable border normal
 
 # This works for Firefox, Thunderbird, and probably a lot of apps
 #for_window [window_role="browser"]     floating enable
-for_window [window_role="About"]       floating enable border normal
-for_window [window_role="Preferences"] floating enable border normal
+##for_window [window_role="About"]       floating enable border normal
+##for_window [window_role="Preferences"] floating enable border normal
 
 # These windows require a specific rule to be displayed in floating mode:
 #for_window [window_role="^Manager"]    floating enable
 #for_window [instance="^Download"]      floating enable
-for_window [instance="^Update"]        floating enable border normal
-for_window [instance="^gcalctool"]     floating enable border normal
-for_window [instance="^galculator"]    floating enable border normal
-for_window [instance="^gnome-keyring"] floating enable border normal
-for_window [instance="^file_progress"] floating enable border normal
-for_window [title="^Compress"]         floating enable border normal
-for_window [title="^Compression"]      floating enable border normal
-for_window [title="^screenkey"]        floating enable border normal
-for_window [title="^Debconf"]          floating enable border normal
-for_window [class="control-center"]    floating enable border normal
-for_window [class="^Pavucontrol"]      floating enable border normal
-for_window [class="^B2G$"]             floating enable border normal
-for_window [class="^B2g$"] floating enable border normal
-for_window [window_role="pop-up"] floating enable
-for_window [window_role="bubble"] floating enable
-for_window [window_role="task_dialog"] floating enable
-for_window [window_role="dialog"] floating enable
-for_window [window_role="menu"] floating enable
-for_window [window_role="Preferences"] floating enable
-for_window [class="com-wolfram-jlink-Reader"] floating enable
-for_window [class="Gifview"] floating enable
+##for_window [instance="^Update"]        floating enable border normal
+##for_window [instance="^gcalctool"]     floating enable border normal
+##for_window [instance="^galculator"]    floating enable border normal
+##for_window [instance="^gnome-keyring"] floating enable border normal
+##for_window [instance="^file_progress"] floating enable border normal
+##for_window [title="^Compress"]         floating enable border normal
+##for_window [title="^Compression"]      floating enable border normal
+##for_window [title="^screenkey"]        floating enable border normal
+##for_window [title="^Debconf"]          floating enable border normal
+##for_window [class="control-center"]    floating enable border normal
+##for_window [class="^Pavucontrol"]      floating enable border normal
+##for_window [class="^B2G$"]             floating enable border normal
+##for_window [class="^B2g$"] floating enable border normal
+##for_window [window_role="pop-up"] floating enable
+##for_window [window_role="bubble"] floating enable
+##for_window [window_role="task_dialog"] floating enable
+##for_window [window_role="dialog"] floating enable
+##for_window [window_role="menu"] floating enable
+##for_window [window_role="Preferences"] floating enable
+##for_window [class="com-wolfram-jlink-Reader"] floating enable
+##for_window [class="Gifview"] floating enable
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -226,65 +226,60 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 
 # ROFI PROGRAM LAUNCHER + morc
 #bindsym $mod+q exec morc_menu
-bindsym $mod+q exec morc_menu conf="/home/sub/.config/morc_menu/morc_menu_v1.conf"
+bindsym $mod+q exec --no-startup-id morc_menu conf="/home/sub/.config/morc_menu/morc_menu_v1.conf"
+bindsym $mod+d exec rofi -show Drun -sidebar-mode -padding 20 -location "6" -font "Roboto 10" -lines 10 -eh 1 -width 100 -terminal terminator
+bindsym Super_L exec exec rofi -show Drun -sidebar-mode -padding 20 -location "6" -font "Roboto 10" -lines 10 -eh 1 -width 100 -terminal terminator
 
-bindsym Super_L exec rofi -show run -fullscreen -padding "400" -lines "4" -line-margin 10 -location 7 -separator-style solid -hide-scrollbar
-bindsym $mod+x exec rofi -sidebar-mode -show Drun -line 3 -eh 2 -width 70 -padding 70 -opacity "70" -font "Roboto 10" -no-disable-history -no-levenshtein-sort -only-match
-bindsym $mod+w exec rofi -show run -eh 2 -fullscreen -line 3 -eh 2 -width 70 -padding 70 -opacity "70" -font "Roboto 10" -no-disable-history -no-levenshtein-sort -only-match
+#bindsym $mod+x exec rofi -sidebar-mode -show Drun -line 3 -eh 2 -width 70 -padding 70 -opacity "70" -font "Roboto 10" -no-disable-history -no-levenshtein-sort -only-match
+#bindsym $mod+w exec rofi -show run -eh 2 -fullscreen -line 3 -eh 2 -width 70 -padding 70 -opacity "70" -font "Roboto 10" -no-disable-history -no-levenshtein-sort -only-match
 #bindsym $mod+d exec rofi -show run -width 900 -fg "#eceff1" -bg "#263238" -hlfg "#AFE28A" -hlbg "#263238" -bc "#37474F" -location 0 -lines 8 -bw 0 -font "Roboto 10" -padding 50 -separator-style none -opacity 90 -run-list-command ". /home/capuno/i3-things/scripts/alias.sh" -run-command "/bin/bash -i -c '{cmd}'"
 
 
-set $background #0b0f20
-set $foreground #31b29b
-set $gray       #215480
-set $primary    #4740a0
-set $secondary  #365fa0
-set $tertiary   #3284a0
-set $warning    #42a07c
+set $background #000000
+set $foreground #000000
+set $gray       #000000
+set $primary    #000000
+set $secondary  #000000
+set $tertiary   #000000
+set $warning    #ED5466
 
 
 # colors                BORDER      BACKGROUND TEXT        INDICATOR
-client.focused          $primary    $primary   $background $primary
-client.focused_inactive $background $primary   $foreground $background
-client.unfocused        $gray       $gray      $background $secondary
-client.urgent           $warning    $warning   $foreground $warning
-
-# class                 border  backgr. text    indicator
-#client.unfocused       #272C33F0 #272C33F0 #cccccc #272C33F0
-
-#client.focused          #ae81ff #a1efe4 #ae81ff #ae81ff
-#client.focused_inactive #ae81ff #a1efe4 #ae81ff #ae81ff
-#client.unfocused        #ae81ff #f8f8f2 #ae81ff #ae81ff
-#client.urgent           #ae81ff #f92672 #ae81ff #ae81ff
+client.focused          $primary    $primary   $warning $warning
+client.focused_inactive $background $background   $warning $warning
+client.unfocused        $gray       $gray      $warning $warning
+client.urgent           $warning    $warning   $warning $warning
 
 #gaps
-new_window pixel
-for_window [class="^.*"] border pixel 2
 
-gaps inner 20
-gaps outer 10
-smart_gaps on
-smart_borders on
+new_window pixel
+for_window [class="^.*"] border pixel 0
+
+gaps inner 15
+gaps outer 5
+#Smart_gaps on
+#smart_borders on
 #smart_borders on|no_gaps
 
 
 exec_always --no-startup-id exec /home/sub/.config/polybar/launch.sh
-exec_always --no-startup-id exec compton --config /home/sub/compton.conf -b
 exec --no-startup-id exec dunst -c "/home/sub/.config/dunst/dunstrc"
 exec --no-startup-id exec /usr/bin/keyboard.sh
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id exec unclutter
 exec --no-startup-id exec numlockx
-exec --no-startup-id exec shutter
+exec --no-startup-id exec shutter --min_at_startup
 exec --no-startup-id exec nm-applet
+exec --no-startup-id exec pa-applet
+exec --no-startup-id exec blueman-applet
+exec --no-startup-id exec xfce4-power-manager
 exec --no-startup-id exec redshiftgui
 exec --no-startup-id exec clipit
-exec --no-startup-id exec pa-applet
-exec --no-startup-id exec comptray
-exec --no-startup-id exec xfce4-power-manager
 exec --no-startup-id exec guake
-exec --no-startup-id exec terminator
 
+#exec --no-startup-id exec terminator
+#exec_always --no-startup-id exec compton --config /home/sub/compton.conf -b
+#exec --no-startup-id exec comptray
 #exec --no-startup-id exec gpmdp
 #exec --no-startup-id exec firefox
 #exec_always --no-startup-id exec feh --bg-fill '/home/sub/Pictures/ff.png'

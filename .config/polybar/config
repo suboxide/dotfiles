@@ -9,7 +9,6 @@
 
 
 [colors]
-;background = #550b0f20
 background = #ffffff
 background-alt = #A1D569
 foreground = #707070
@@ -18,7 +17,6 @@ foreground-dim = #ED5466
 primary = #ED5466
 secondary = #ED5466
 alert = #EF6B7B
-
 
 [global/wm]
 margin-top = 5
@@ -31,52 +29,37 @@ height = 20
 offset-x = 0
 offset-y = 0
 ;override-redirect = true
-
-;background = ${xrdb:color9}
 background = ${colors.background}
 foreground = ${colors.foreground}
-
 ;overline-size = 2
 ;overline-color = #f00
 ;underline-size = 1
 ;underline-color = #00f
-
 border-bottom = 2
 border-bottom-color = #A1D569
-
 spacing = 1
 padding-left = 0
 padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
-
-
-font-0 = Roboto:size=10;0
-;font-0 = FontAwesome:size=10;0
-font-1 = Roboto:size=10;0
-font-2 = Roboto:size=10;0
-;font-2 = siji:pixelsize=10;0
-font-3 = FontAwesome:size=10;0
-
+font-0 = Roboto:size=10;3
+font-1 = Roboto:size=10;3
+font-2 = Roboto:size=10;3
+font-3 = FontAwesome:size=10;3
 modules-left = bspwm i3
 modules-center = xwindow
 modules-right = date powermenu
-
 ; memory cpu eth battery temperature xkeyboard wlan volume backlight
-
 tray-position = right
 tray-padding = 5
 ;tray-transparent = true
 tray-background = #ffffff
-
+;tray-detached = false
 ;wm-restack = bspwm
-;wm-restack = i3
-
+wm-restack = i3
 ;override-redirect = true
-
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
-
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 

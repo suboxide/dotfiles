@@ -227,9 +227,11 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 # ROFI PROGRAM LAUNCHER + morc
 #bindsym $mod+q exec morc_menu
 bindsym $mod+q exec --no-startup-id morc_menu conf="/home/sub/.config/morc_menu/morc_menu_v1.conf"
-bindsym $mod+d exec rofi -show Drun -sidebar-mode -padding 20 -location "6" -font "Roboto 10" -lines 10 -eh 1 -width 100 -terminal terminator
-bindsym Super_L exec exec rofi -show Drun -sidebar-mode -padding 20 -location "6" -font "Roboto 10" -lines 10 -eh 1 -width 100 -terminal terminator
+bindsym $mod+d exec rofi -show Drun -sidebar-mode -padding 20 -location "2" -font "Roboto 10" -lines 10 -eh 1 -width 100 -terminal terminator
+#bindsym $mod+d exec rofi -show Drun -sidebar-mode -padding 20 -location "2" -font "Roboto 10" -lines 10 -eh 1 -width 100 -terminal terminator
+bindsym Super_L exec rofi -show Drun -sidebar-mode -padding 20 -location "2" -font "Roboto 10" -lines 10 -eh 1 -width 100 -terminal terminator
 
+#rofi: bindsym $mod+d exec "rofi -combi-modi window,drun,run -show combi -modi combi -lines 10 -width 50 -padding 100"
 #bindsym $mod+x exec rofi -sidebar-mode -show Drun -line 3 -eh 2 -width 70 -padding 70 -opacity "70" -font "Roboto 10" -no-disable-history -no-levenshtein-sort -only-match
 #bindsym $mod+w exec rofi -show run -eh 2 -fullscreen -line 3 -eh 2 -width 70 -padding 70 -opacity "70" -font "Roboto 10" -no-disable-history -no-levenshtein-sort -only-match
 #bindsym $mod+d exec rofi -show run -width 900 -fg "#eceff1" -bg "#263238" -hlfg "#AFE28A" -hlbg "#263238" -bc "#37474F" -location 0 -lines 8 -bw 0 -font "Roboto 10" -padding 50 -separator-style none -opacity 90 -run-list-command ". /home/capuno/i3-things/scripts/alias.sh" -run-command "/bin/bash -i -c '{cmd}'"
@@ -263,7 +265,9 @@ gaps outer 5
 
 
 exec_always --no-startup-id exec /home/sub/.config/polybar/launch.sh
-exec --no-startup-id exec dunst -c "/home/sub/.config/dunst/dunstrc"
+bindsym $mod+b exec /home/sub/.config/polybar/launch.sh
+bindsym $mod+n exec /home/sub/.config/polybar/launchNO.sh
+
 exec --no-startup-id exec /usr/bin/keyboard.sh
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id exec unclutter
@@ -275,7 +279,9 @@ exec --no-startup-id exec blueman-applet
 exec --no-startup-id exec xfce4-power-manager
 exec --no-startup-id exec redshiftgui
 exec --no-startup-id exec clipit
+exec --no-startup-id exec indicator-kdeconnect
 exec --no-startup-id exec guake
+exec --no-startup-id exec dunst -c "/home/sub/.config/dunst/dunstrc"
 
 #exec --no-startup-id exec terminator
 #exec_always --no-startup-id exec compton --config /home/sub/compton.conf -b

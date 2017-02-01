@@ -21,7 +21,7 @@ exec --no-startup-id exec xrandr --output VGA1 --auto --right-of eDP1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec terminator
 
 # start a file manager
 bindsym $mod+Shift+Return exec nautilus
@@ -85,7 +85,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+q focus child
+#bindsym $mod+shift+a focus child
 
 # Workspaces [1…12]                                       ($mod+[1234567890-=])
 bind $mod+10 workspace $workspace1
@@ -129,42 +129,56 @@ set $workspace10 10
 #assign [class="^Google Play Music Desktop Player"] → $workspace9
 
 # Floating windows should have a border and titlebar (not working?)
-##new_float normal
+new_float normal
 
 # Correct handling of floating dialogs
 # https://wiki.archlinux.org/index.php/i3#Correct_handling_of_floating_dialogs
-##for_window [window_role="pop-up"]      floating enable border normal
-##for_window [window_role="task_dialog"] floating enable border normal
+for_window [window_role="pop-up"]      floating enable border normal
+for_window [window_role="task_dialog"] floating enable border normal
 
 # This works for Firefox, Thunderbird, and probably a lot of apps
 #for_window [window_role="browser"]     floating enable
-##for_window [window_role="About"]       floating enable border normal
-##for_window [window_role="Preferences"] floating enable border normal
+for_window [window_role="About"]       floating enable border normal
+for_window [window_role="Preferences"] floating enable border normal
 
 # These windows require a specific rule to be displayed in floating mode:
 #for_window [window_role="^Manager"]    floating enable
 #for_window [instance="^Download"]      floating enable
-##for_window [instance="^Update"]        floating enable border normal
-##for_window [instance="^gcalctool"]     floating enable border normal
-##for_window [instance="^galculator"]    floating enable border normal
-##for_window [instance="^gnome-keyring"] floating enable border normal
-##for_window [instance="^file_progress"] floating enable border normal
-##for_window [title="^Compress"]         floating enable border normal
-##for_window [title="^Compression"]      floating enable border normal
-##for_window [title="^screenkey"]        floating enable border normal
-##for_window [title="^Debconf"]          floating enable border normal
-##for_window [class="control-center"]    floating enable border normal
-##for_window [class="^Pavucontrol"]      floating enable border normal
-##for_window [class="^B2G$"]             floating enable border normal
-##for_window [class="^B2g$"] floating enable border normal
-##for_window [window_role="pop-up"] floating enable
-##for_window [window_role="bubble"] floating enable
-##for_window [window_role="task_dialog"] floating enable
-##for_window [window_role="dialog"] floating enable
-##for_window [window_role="menu"] floating enable
-##for_window [window_role="Preferences"] floating enable
-##for_window [class="com-wolfram-jlink-Reader"] floating enable
-##for_window [class="Gifview"] floating enable
+for_window [instance="^Update"]        floating enable border normal
+for_window [instance="^gcalctool"]     floating enable border normal
+for_window [instance="^galculator"]    floating enable border normal
+for_window [instance="^gnome-keyring"] floating enable border normal
+for_window [instance="^file_progress"] floating enable border normal
+for_window [title="^Compress"]         floating enable border normal
+for_window [title="^Compression"]      floating enable border normal
+for_window [title="^screenkey"]        floating enable border normal
+for_window [title="^Debconf"]          floating enable border normal
+for_window [class="control-center"]    floating enable border normal
+for_window [class="^Pavucontrol"]      floating enable border normal
+for_window [class="^B2G$"]             floating enable border normal
+for_window [class="^B2g$"] floating enable border normal
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="bubble"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_role="dialog"] floating enable
+for_window [window_role="menu"] floating enable
+for_window [window_role="Preferences"] floating enable
+for_window [class="com-wolfram-jlink-Reader"] floating enable
+for_window [class="Gifview"] floating enable
+
+# https://github.com/ValveSoftware/steam-for-linux/issues/1040
+for_window [class="^Steam$" title="^Friends$"] floating enable
+for_window [class="^Steam$" title="Steam - News"] floating enable
+for_window [class="^Steam$" title=".* - Chat"] floating enable
+for_window [class="^Steam$" title="^Settings$"] floating enable
+for_window [class="^Steam$" title=".* - event started"] floating enable
+for_window [class="^Steam$" title=".* CD key"] floating enable
+for_window [class="^Steam$" title="^Steam - Self Updater$"] floating enable
+for_window [class="^Steam$" title="^Screenshot Uploader$"] floating enable
+for_window [class="^Steam$" title="^Steam Guard - Computer Authorization Required$"] floating enable
+for_window [title="^Steam Keyboard$"] floating enable
+
+
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -203,6 +217,8 @@ bindsym $mod+r mode "resize"
 # Previous/Next Workspace                                           ($mod+[ui])
 bind $mod+30 workspace prev
 bind $mod+31 workspace next
+bindsym Mod1+Tab workspace next
+bindsym Mod1+Shift+Tab workspace prev
 
 # Move to previous/Next Workspace                             ($mod+Shift+[ui])
 bind $mod+Shift+30 move window to workspace prev
@@ -285,7 +301,7 @@ exec --no-startup-id exec dunst -c "/home/sub/.config/dunst/dunstrc"
 
 #exec --no-startup-id exec terminator
 #exec_always --no-startup-id exec compton --config /home/sub/compton.conf -b
-#exec --no-startup-id exec comptray
+exec --no-startup-id exec comptray
 #exec --no-startup-id exec gpmdp
 #exec --no-startup-id exec firefox
 #exec_always --no-startup-id exec feh --bg-fill '/home/sub/Pictures/ff.png'

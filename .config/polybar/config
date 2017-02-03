@@ -9,14 +9,18 @@
 
 
 [colors]
-background = #ffffff
-background-alt = #A1D569
-foreground = #707070
-foreground-alt = #ED5466
-foreground-dim = #ED5466
-primary = #ED5466
-secondary = #ED5466
-alert = #EF6B7B
+background = #cc0e0d10
+foreground = #dbe3da
+
+
+background-alt = #615f8a
+foreground-alt = #615f8a
+foreground-dim = #615f8a
+primary = #615f8a
+secondary = #70b19f
+
+
+alert = #00FF00
 
 [global/wm]
 margin-top = 5
@@ -36,7 +40,7 @@ foreground = ${colors.foreground}
 ;underline-size = 1
 ;underline-color = #00f
 border-bottom = 2
-border-bottom-color = #A1D569
+border-bottom-color = #615f8a
 spacing = 1
 padding-left = 0
 padding-right = 2
@@ -52,8 +56,8 @@ modules-right = date powermenu
 ; memory cpu eth battery temperature xkeyboard wlan volume backlight
 tray-position = right
 tray-padding = 5
-;tray-transparent = true
-tray-background = #ffffff
+tray-transparent = true
+tray-background = #aa0e0d10
 ;tray-detached = false
 ;wm-restack = bspwm
 wm-restack = i3

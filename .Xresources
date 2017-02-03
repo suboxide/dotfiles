@@ -1,58 +1,56 @@
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
-rofi.color-enabled: true
-rofi.color-window: #ffffff, #ffffff, #ffffff
-rofi.color-normal: #ffffff, #707070, #ffffff, #a1d569, #707070
-rofi.color-active: #ffffff, #5dc7ea, #ffffff, #909090, #5dc7ea
-rofi.color-urgent: #ffffff, #ed5466, #ffffff, #909090, #ed5466
-
+rofi.opacity: 90
+rofi.font: Inconsolata, FontAwesome 13
+! Use extended color scheme
+rofi.color-enabled:                  true
+! Color scheme for normal row
+rofi.color-normal:                   #0e0d10, #dbe3da , #0e0d10 , #615f8a , #dbe3da
+rofi.color-urgent:                   #0e0d10, #dbe3da , #0e0d10 , #7b686b , #dbe3da
+! Color scheme for active row
+rofi.color-active:                   #0e0d10, #dbe3da , #0e0d10 , #615f8a , #dbe3da
+! Color scheme window
+rofi.color-window:                   #0e0d10, #0e0d10 , #615f8a
+! Separator style (none, dash, solid)
+rofi.separator-style:                solid
 ! make otf / ttf fonts look pretty.  does not matter if you are using a bitmap font.
-Xft.autohint: 0
-Xft.lcdfilter:  lcddefault
-Xft.hintstyle:  hintslight
-Xft.hinting: 1
-Xft.antialias: 1
-Xft.rgba: rgb
-
-*faceName: Terminus
-*faceSize: 10
-*font: xft:Terminus:pixelsize=10
-*.letterSpace: -2
 
 ! special
-*.foreground:   #707070
-*.background:   #ffffff
-*.cursorColor:  #707070
+*.foreground:   #dbe3da
+*.background:   #0e0d10
+*.cursorColor:  #dbe3da
 
 ! black
-*.color0:       #d3d3d3
-*.color8:       #b3b3b3
+*.color0:       #0e0d10
+*.color8:       #666666
 
 ! red
-*.color1:       #ef6b7b
-*.color9:       #ed5466
+*.color1:       #7b686b
+*.color9:       #7b686b
 
 ! green
-*.color2:       #a1d569
-*.color10:      #afdb80
+*.color2:       #615f8a
+*.color10:      #615f8a
 
 ! yellow
-*.color3:       #f59335
-*.color11:      #f59335
+*.color3:       #965d91
+*.color11:      #965d91
 
 ! blue
-*.color4:       #4ec2e8
-*.color12:      #5dc7ea
+*.color4:       #70b19f
+*.color12:      #70b19f
 
 ! magenta
-*.color5:       #fec7cd
-*.color13:      #d2a4b4
+*.color5:       #a0a2a6
+*.color13:      #a0a2a6
 
 ! cyan
-*.color6:       #95c1c0
-*.color14:      #75a1a0
+*.color6:       #acd4c3
+*.color14:      #acd4c3
 
 ! white
-*.color7:       #707070
-*.color15:      #909090
+*.color7:       #dbe3da
+*.color15:      #dbe3da
+
+

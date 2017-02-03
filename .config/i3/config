@@ -14,8 +14,8 @@ font pango: Roboto 8
 
 set $mod Mod1
 #exec --no-startup-id exec xrandr --output VGA1 --auto --right-of eDP1 --primary
-exec --no-startup-id exec xrandr --output VGA1 --auto --right-of eDP1
-
+#exec --no-startup-id exec xrandr --output VGA1 --auto --right-of eDP1
+exec --no-startup-id exec xrandr --auto
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -262,16 +262,26 @@ set $tertiary   #000000
 set $warning    #ED5466
 
 
+set $fg  #dbe3da
+set $bg  #615f8a
+
+# class                 border  backgr. text indicator child_border
+client.focused          $bg    $bg     $fg   $bg   $bg
+client.focused_inactive $bg    $bg     $fg   $bg   $bg
+client.unfocused        $bg    $bg     $fg   $bg   $bg
+client.urgent           $bg    $bg     $fg   $bg   $bg
+client.placeholder       $bg    $bg     $fg   $bg   $bg
+
 # colors                BORDER      BACKGROUND TEXT        INDICATOR
-client.focused          $primary    $primary   $warning $warning
-client.focused_inactive $background $background   $warning $warning
-client.unfocused        $gray       $gray      $warning $warning
-client.urgent           $warning    $warning   $warning $warning
+#client.focused          $primary    $primary   $warning $warning
+#client.focused_inactive $background $background   $warning $warning
+#client.unfocused        $gray       $gray      $warning $warning
+#client.urgent           $warning    $warning   $warning $warning
 
 #gaps
 
 new_window pixel
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 2
 
 gaps inner 15
 gaps outer 5
@@ -299,8 +309,12 @@ exec --no-startup-id exec indicator-kdeconnect
 exec --no-startup-id exec guake
 exec --no-startup-id exec dunst -c "/home/sub/.config/dunst/dunstrc"
 
+#exec_always --no-startup-id exec trayer --width 25 --height 16 --align right  --SetDockType false --SetPartialStrut true --transparent true --alpha 80 --tint 0x0e0d10 
+
 #exec --no-startup-id exec terminator
 #exec_always --no-startup-id exec compton --config /home/sub/compton.conf -b
+
+exec_always --no-startup-id exec compton -b
 exec --no-startup-id exec comptray
 #exec --no-startup-id exec gpmdp
 #exec --no-startup-id exec firefox

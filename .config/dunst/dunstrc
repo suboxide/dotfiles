@@ -17,13 +17,13 @@
     horizontal_padding = 10
     separator_color = frame
     startup_notification = true
-    dmenu = "/usr/bin/dmenu -p dunst: -nb #FFFFFF -nf #000000 -sb #a1d569 -sf #000000"
+    dmenu = "/usr/bin/dmenu -p dunst: -nb #dbe3da -nf #0e0d10 -sb #965d91 -sf #0e0d10"
     browser = /home/knopwob/bin/url_dispatcher
 
 
 [frame]
     width = 2
-    color = "#a1d569"
+    color = "#965d91"
 
 [shortcuts]
     close = ctrl+space
@@ -32,18 +32,18 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#a1d569"
-    foreground = "#000000"
+    background = "#965d91"
+    foreground = "#0e0d10"
     timeout = 30
 
 [urgency_normal]
-    background = "#a1d569"
-    foreground = "#000000"
+    background = "#965d91"
+    foreground = "#0e0d10"
     timeout = 45
 
 [urgency_critical]
-    background = "#ef6b7b"
-    foreground = "#000000"
+    background = "#965d91"
+    foreground = "#0e0d10"
     timeout = 0
 
 
@@ -52,7 +52,7 @@
     summary = *igned*
     urgency = low
     timeout = 3
-    background = "#a1d569"
+    background = "#965d91"
 
 [libpurple_came_back]
     appname = libpurple

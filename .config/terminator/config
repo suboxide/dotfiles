@@ -1,8 +1,11 @@
 [global_config]
-  title_inactive_bg_color = "#ffffff"
-  title_inactive_fg_color = "#707070"
-  title_transmit_bg_color = "#ffffff"
-  title_transmit_fg_color = "#707070"
+  borderless = True
+  title_font = Fira Code 9
+  title_inactive_bg_color = "#666666"
+  title_inactive_fg_color = "#dbe3da"
+  title_transmit_bg_color = "#0e0d10"
+  title_transmit_fg_color = "#dbe3da"
+  title_use_system_font = False
 [keybindings]
 [layouts]
   [[default]]
@@ -16,14 +19,13 @@
 [plugins]
 [profiles]
   [[default]]
-    background_color = "#ffffff"
-    cursor_color = "#707070"
+    background_color = "#0e0d10"
+    background_darkness = 0.78
+    cursor_color = "#dbe3da"
     font = Fira Code 10
-    foreground_color = "#707070"
-    icon_bell = False
-    palette = "#d3d3d3:#ef6b7b:#a1d569:#f59335:#4ec2e8:#fec7cd:#95c1c0:#707070:#b3b3b3:#ed5466:#afdb80:#f59335:#5dc7ea:#d2a4b4:#75a1a0:#909090"
+    foreground_color = "#dbe3da"
+    palette = "#0e0d10:#7b686b:#615f8a:#965d91:#70b19f:#a0a2a6:#acd4c3:#dbe3da:#666666:#7b686b:#615f8a:#965d91:#70b19f:#a0a2a6:#acd4c3:#dbe3da"
     scrollback_infinite = True
     scrollbar_position = hidden
     show_titlebar = False
     use_system_font = False
-    visible_bell = True

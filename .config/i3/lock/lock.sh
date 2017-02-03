@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-#icon="$HOME/.config/i3/lock/icon.png"
+#icon="$HOME/.config/i3/lock/icon.jpg"
 #tmpbg='/tmp/screen.png'
 
 #(( $# )) && { icon=$1; }

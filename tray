@@ -1,0 +1,3 @@
+trayer --width 25 --height 10 --SetDockType false --SetPartialStrut false --transparent true --alpha 80 
+--tint 0x0e0d10
+

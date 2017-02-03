@@ -1,0 +1,43 @@
+[options]
+font = Fira code 10
+scrollback_lines = 1000000
+
+[colors]
+
+# special
+foreground      = #dbe3da
+foreground_bold = #dbe3da
+cursor          = #dbe3da
+background      = #0e0d10
+
+# black
+color0  = #0e0d10
+color8  = #666666
+
+# red
+color1  = #7b686b
+color9  = #7b686b
+
+# green
+color2  = #615f8a
+color10 = #615f8a
+
+# yellow
+color3  = #965d91
+color11 = #965d91
+
+# blue
+color4  = #70b19f
+color12 = #70b19f
+
+# magenta
+color5  = #a0a2a6
+color13 = #a0a2a6
+
+# cyan
+color6  = #acd4c3
+color14 = #acd4c3
+
+# white
+color7  = #dbe3da
+color15 = #dbe3da

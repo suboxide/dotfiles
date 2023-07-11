@@ -49,8 +49,8 @@
   	home-manager.enable = true;
   	git = {
     	enable = true;
-    	userName = "Sebastien Brouwers";
-    	userEmail = "suboxide@gmail.com";
+    	userName = "";
+    	userEmail = "";
   	};
   	gh = {
   		enable = true;

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+set -e
+
+selection="$(cliphist list | GDK_BACKEND=wayland rofi -dmenu)"
+cliphist decode <<<"$selection" | wl-copy

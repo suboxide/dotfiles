@@ -1,0 +1,152 @@
+font pango:monospace 8.000000
+floating_modifier Mod4
+default_border pixel 1
+default_floating_border normal 2
+hide_edge_borders none
+focus_wrapping no
+focus_follows_mouse yes
+focus_on_window_activation smart
+mouse_warping output
+workspace_layout default
+workspace_auto_back_and_forth yes
+client.focused #282936 #282936 #e9e9f4 #3a3c4e #282936
+client.focused_inactive #3a3c4e #3a3c4e #e9e9f4 #3a3c4e #3a3c4e
+client.unfocused #3a3c4e #3a3c4e #e9e9f4 #3a3c4e #3a3c4e
+client.urgent #ea51b2 #ea51b2 #e9e9f4 #ea51b2 #ea51b2
+client.placeholder #000000 #0c0c0c #ffffff #000000 #0c0c0c
+client.background #ffffff
+
+bindsym Mod4+0 workspace number 10
+bindsym Mod4+1 workspace number 1
+bindsym Mod4+2 workspace number 2
+bindsym Mod4+3 workspace number 3
+bindsym Mod4+4 workspace number 4
+bindsym Mod4+5 workspace number 5
+bindsym Mod4+6 workspace number 6
+bindsym Mod4+7 workspace number 7
+bindsym Mod4+8 workspace number 8
+bindsym Mod4+9 workspace number 9
+bindsym Mod4+Down focus down
+bindsym Mod4+Left focus left
+bindsym Mod4+Return exec kitty
+bindsym Mod4+Right focus right
+bindsym Mod4+Shift+0 move container to workspace number 10
+bindsym Mod4+Shift+1 move container to workspace number 1
+bindsym Mod4+Shift+2 move container to workspace number 2
+bindsym Mod4+Shift+3 move container to workspace number 3
+bindsym Mod4+Shift+4 move container to workspace number 4
+bindsym Mod4+Shift+5 move container to workspace number 5
+bindsym Mod4+Shift+6 move container to workspace number 6
+bindsym Mod4+Shift+7 move container to workspace number 7
+bindsym Mod4+Shift+8 move container to workspace number 8
+bindsym Mod4+Shift+9 move container to workspace number 9
+bindsym Mod4+Shift+Down move down
+bindsym Mod4+Shift+Left move left
+bindsym Mod4+Shift+Right move right
+bindsym Mod4+Shift+Up move up
+bindsym Mod4+Shift+c reload
+bindsym Mod4+Shift+r restart
+bindsym Mod4+Shift+space floating toggle
+bindsym Mod4+Up focus up
+bindsym Mod4+a focus parent
+bindsym Mod4+comma layout stacking
+bindsym Mod4+d exec rofi -show drun
+bindsym Mod4+f fullscreen toggle
+bindsym Mod4+h split h
+bindsym Mod4+l exec swaylock -c '$HOME/.config/swaylock/config'
+bindsym Mod4+minus scratchpad show
+bindsym Mod4+p exec /nix/store/911vlfckdaka0db9pygr5q27v1asc3lr-slurp-1.4.0/bin/slurp | /nix/store/lfw70hwlc9h65h2aa30c3rj9szfazdy2-grim-1.4.1/bin/grim -g- $(xdg-user-dir PICTURES)/Pictures/Screenshots/screenshot-$(date +%Y%m%d-%H%M%S).png
+bindsym Mod4+period layout tabbed
+bindsym Mod4+q kill
+bindsym Mod4+r mode resize
+bindsym Mod4+s focus child
+bindsym Mod4+slash layout toggle split
+bindsym Mod4+space focus mode_toggle
+bindsym Mod4+underscore move container to scratchpad
+bindsym Mod4+v split v
+bindsym XF86AudioLowerVolume exec pamixer -ud 2 && pamixer --get-volume > $WOBSOCK
+bindsym XF86AudioMute exec /nix/store/m9mydk89fa5v7ilsa8yi73bvhhwhcpl1-pulseaudio-16.1/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec pamixer -ui 2 && pamixer --get-volume > $WOBSOCK
+
+input "type:keyboard" {
+xkb_layout us
+xkb_numlock enabled
+}
+
+output "DP-3" {
+bg /etc/nixos/wall.png fill
+mode 2560x1080@75Hz
+pos 1280 0
+scale 1
+}
+
+output "eDP-1" {
+bg /etc/nixos/wall.png fill
+mode 800x1280@60Hz
+pos 0 1000
+scale 1
+transform 90
+}
+
+mode "resize" {
+  bindsym Down resize shrink height
+  bindsym Escape mode default
+  bindsym Left resize shrink width
+  bindsym Return mode default
+  bindsym Right resize grow width
+  bindsym Up resize grow height
+}
+
+gaps inner 10
+gaps outer 0
+smart_borders on
+for_window [class="^Steam$"] floating enable
+for_window [class="^Wine$"] floating enable
+for_window [title="^Picture-in-Picture$"] floating enable, sticky enable
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
+exec dbus-sway-environment
+
+exec configure-gtk
+
+exec waybar
+
+exec autotiling
+
+exec swaync
+
+exec wl-paste --watch cliphist store
+
+exec /nix/store/$(ls -la /nix/store | grep 'mate-polkit' | grep '4096' | awk '{print $9}' | sed -n '$p')/libexec/polkit-mate-authentication-agent-1
+
+workspace "1" output "DP-3"
+workspace "2" output "DP-3"
+workspace "3" output "DP-3"
+workspace "4" output "DP-3"
+workspace "5" output "DP-3"
+workspace "6" output "DP-3"
+workspace "7" output "DP-3"
+workspace "8" output "eDP-1"
+workspace "9" output "eDP-1"
+workspace "10" output "eDP-1"
+exec "/nix/store/29n5vxmqjfy4qips1x66hq6y2m9q0qlp-dbus-1.14.8/bin/dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_SESSION_TYPE NIXOS_OZONE_WL; systemctl --user start sway-session.target"
+   		focus output DP-3
+   		seat seat0 xcursor_theme phinger-cursors-light
+   		corner_radius 10
+   		blur enable
+   		blur_xray off
+   		blur_passes 2
+   		blur_radius 5
+   		shadows on
+   		shadows_on_csd off
+   		shadow_blur_radius 20
+		shadow_color #0000007f
+		default_dim_inactive 0.1
+		dim_inactive_colors.unfocused #000000FF
+		dim_inactive_colors.urgent #900000FF
+		layer_effects 'waybar' blur enable; shadows enable
+		layer_effects 'rofi' blur enable
+		layer_effects 'wlogout' blur enable; shadows enable
+		set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
+		exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
+		

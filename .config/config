@@ -1,0 +1,222 @@
+[
+  {
+    "backlight": {
+      "device": "amdgpu_bl1",
+      "format": "<span>{icon}</span>",
+      "format-icons": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "interval": 2,
+      "on-click": "wlsunset -l 51.03333 -L 3.15",
+      "on-click-right": "wlsunset -l 51.03333 -L 3.15",
+      "on-scroll-down": "light -U 5%",
+      "on-scroll-up": "light -A 5%",
+      "smooth-scrolling-threshold": 1,
+      "tooltip": true,
+      "tooltip-format": "{percent}%"
+    },
+    "battery": {
+      "design-capacity": false,
+      "format": "<span>{icon}</span>",
+      "format-charging": "<span></span>",
+      "format-full": "<span></span>",
+      "format-icons": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "format-plugged": "<span>ﮣ</span>",
+      "format-time": "{H}h {M}min",
+      "full-at": 93,
+      "interval": 60,
+      "on-click": "kitty btop",
+      "on-click-right": "kitty btop",
+      "states": {
+        "critical": 15,
+        "good": 90,
+        "warning": 30
+      },
+      "tooltip": true
+    },
+    "bluetooth": {
+      "format": "<span>󰂯</span>",
+      "format-connected": "<span>󰂱</span>",
+      "format-connected-battery": "<span>󰂱</span>",
+      "on-click": "blueman-manager",
+      "on-click-right": "blueman-manager",
+      "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+      "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+      "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+    },
+    "clock": {
+      "format": "<span size='x-large'>{:%H}</span>",
+      "interval": 60,
+      "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "clock#2": {
+      "format": "<span size='x-large'>{:%M}</span>",
+      "interval": 60,
+      "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "custom/copy": {
+      "format": "<span></span>",
+      "on-click": "/etc/nixos/rofiCopy",
+      "tooltip": "false"
+    },
+    "custom/menu": {
+      "format": "<span size='x-large' ></span>",
+      "on-click": "GDK_BACKEND=wayland rofi -no-lazy-grab -show drun",
+      "tooltip": false
+    },
+    "custom/notification": {
+      "escape": true,
+      "exec": "swaync-client -swb",
+      "exec-if": "which swaync-client",
+      "format": "{icon}",
+      "format-icons": {
+        "dnd-none": "<span></span>",
+        "dnd-notification": "<span>󰵙</span>",
+        "none": "<span></span>",
+        "notification": "<span></span>"
+      },
+      "on-click": "swaync-client -t -sw",
+      "on-click-right": "swaync-client -d -sw",
+      "return-type": "json",
+      "tooltip": false
+    },
+    "custom/power": {
+      "format": "<span></span>",
+      "on-click": "wlogout -p layer-shell",
+      "tooltip": false
+    },
+    "exclusive": true,
+    "fixed-center": true,
+    "gtk-layer-shell": true,
+    "id": "nixbar",
+    "idle_inhibitor": {
+      "format": "{icon}",
+      "format-icons": {
+        "activated": "<span>󰅶</span>",
+        "deactivated": "<span>󰾪</span>"
+      },
+      "start-activated": true
+    },
+    "ipc": false,
+    "layer": "top",
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "margin-top": 0,
+    "modules-center": [],
+    "modules-left": [
+      "custom/menu",
+      "sway/workspaces"
+    ],
+    "modules-right": [
+      "pulseaudio",
+      "battery",
+      "bluetooth",
+      "backlight",
+      "network",
+      "custom/copy",
+      "idle_inhibitor",
+      "tray",
+      "custom/notification",
+      "clock",
+      "clock#2",
+      "custom/power"
+    ],
+    "network": {
+      "format-disabled": "<span>睊</span>",
+      "format-disconnected": "<span>睊</span>",
+      "format-ethernet": "<span></span>",
+      "format-linked": "<span></span>",
+      "format-wifi": "<span>直</span>",
+      "interval": 5,
+      "on-click": "[[ ! `pidof nm-connection-editor` ]] && nm-connection-editor || pkill nm-connection-e",
+      "on-click-right": "kitty nmtui",
+      "tooltip-format": "{essid} :  {bandwidthUpBits} |  {bandwidthDownBits}"
+    },
+    "passthrough": false,
+    "position": "right",
+    "pulseaudio": {
+      "format": "<span>{icon}</span>",
+      "format-icons": {
+        "default": [
+          "奄",
+          "奔",
+          "墳"
+        ]
+      },
+      "format-muted": "<span>婢</span>",
+      "on-click": "pw-volume mute toggle",
+      "on-click-right": "pavucontrol",
+      "scroll-step": 5,
+      "smooth-scrolling-threshold": 1,
+      "tooltip": true
+    },
+    "spacing": 0,
+    "sway/workspaces": {
+      "all-outputs": false,
+      "disable-click": false,
+      "disable-scroll": false,
+      "disable-scroll-wraparound": true,
+      "enable-bar-scroll": true,
+      "format": "{icon}",
+      "format-icons": {
+        "default": "",
+        "focused": "",
+        "urgent": ""
+      },
+      "persistent_workspaces": {
+        "1": [
+          "DP-3"
+        ],
+        "10": [
+          "eDP-1"
+        ],
+        "2": [
+          "DP-3"
+        ],
+        "3": [
+          "DP-3"
+        ],
+        "4": [
+          "DP-3"
+        ],
+        "5": [
+          "DP-3"
+        ],
+        "6": [
+          "DP-3"
+        ],
+        "7": [
+          "DP-3"
+        ],
+        "8": [
+          "eDP-1"
+        ],
+        "9": [
+          "eDP-1"
+        ]
+      }
+    },
+    "tray": {
+      "icon-size": 16,
+      "spacing": 8
+    }
+  }
+]

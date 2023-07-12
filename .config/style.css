@@ -1,0 +1,176 @@
+		* {
+		    font-family: "JetBrains Mono Nerd", "Iosevka Nerd Font", "Font Awesome";
+		    font-size: 16px;
+			min-width: 22px;
+		}
+		window#waybar {
+		   background: rgba(40, 41, 54, 0.8);
+		   border-left: 1px solid #3a3c4e;
+		   border-radius: 0px 0px 0px 0px;
+		}
+		#custom-menu {
+    		background-color: #3a3c4e;
+    		color : #62d6e8;
+    		border-radius: 6px 6px 6px 6px;
+    		padding: 5px 8px 5px 0px;
+    		margin-left: 5px;
+    		margin-right: 5px;
+    		margin-top: 8px;
+    		margin-bottom: 8px;
+		}
+		button:hover {
+			background: #626483;
+		}
+		#workspaces {
+		    border-radius: 6px 6px 6px 6px;
+		    padding: 10px 5px 10px 5px;
+		    margin-left: 5px;
+		    margin-right: 5px;
+		    background-color: #3a3c4e;
+		}
+		#workspaces button {
+			border: 0px solid rgba(255, 184, 108, 0.5);
+		 	color: #b45bcf;
+      		padding: 5px 10px 5px 5px;
+       		margin-right: 0px;
+		}
+		#workspaces button.focused {
+			color: #00f769;
+    		padding: 5px 10px 5px 5px;
+    	    margin-right: 0px;
+		}
+		#workspaces button.persistent {
+			color: #4d4f68;
+	    	padding: 5px 10px 5px 5px;    
+	    	margin-right: 0px;
+		}
+		#pulseaudio {
+		    color: #00f769;
+		    background-color: #3a3c4e;
+		    border-radius: 6px 6px 0px 0px;
+		    padding: 10px 4px 5px 5px;
+		    margin-left: 5px;
+		    margin-right: 5px;
+		}
+		#pulseaudio.bluetooth {
+		    color: #00f769;
+		}
+		#pulseaudio.muted {
+		    color: #ea51b2;
+		}
+		#battery {
+		    color: #b45bcf;
+		    background-color: #3a3c4e;
+		    border-radius: 0px 0px 0px 0px;
+		    padding: 5px 4px 5px 5px;
+		    margin-left: 5px;
+		    margin-right: 5px;
+		}
+		#battery.charging {
+		}
+		#battery.plugged {
+		}
+		#bluetooth {
+		    color: #62d6e8;
+		    background-color: #3a3c4e;
+		    border-radius: 0px 0px 0px 0px;
+		    padding: 5px 4px 5px 5px;
+		    margin-left: 5px;
+		    margin-right: 5px;
+		}
+		#backlight {
+		    color: #ebff87;
+		    background-color: #3a3c4e;
+		    border-radius: 0px 0px 0px 0px;
+		    padding: 5px 4px 0px 5px;
+		    margin-left: 5px;
+		    margin-right: 5px;
+		}
+		#network {
+		    color: #a1efe4;
+		    background-color: #3a3c4e;
+		    border-radius: 0px 0px 6px 6px;
+		    padding: 5px 4px 10px 5px;
+		    margin-left: 5px;
+		    margin-right: 5px;
+		    margin-bottom: 8px;
+		}
+		#network.disconnected {
+		    color: #ea51b2;
+		}
+		#network.disabled {
+		    color: #ea51b2;
+		}
+		#network.linked {
+		}
+		#network.ethernet {
+		}
+		#network.wifi {
+		}
+		#custom-copy {
+		    background-color: #3a3c4e;
+		    border-radius: 6px 6px 0px 0px;
+		    padding: 10px 6px 5px 0px;
+		    margin-left: 5px;
+		    margin-right: 5px;
+		    color: #e9e9f4;
+		}
+		#idle_inhibitor {
+		    background-color: #3a3c4e;
+		    border-radius: 0px 0px 0px 0px;
+		    padding: 5px 5px 5px 1px;
+		    margin-left: 5px;
+		    margin-right: 5px;
+		    color: #ebff87;
+		}
+		#tray {
+		    background-color: #3a3c4e;
+		    border-radius: 0px 0px 0px 0px;
+		    padding: 5px 4px 5px 5px;
+		    margin-left: 5px;
+		    margin-right: 5px;
+		    }
+		    
+		#tray > .passive {
+		    -gtk-icon-effect: dim;
+		}
+		#tray > .needs-attention {
+		    -gtk-icon-effect: highlight;
+		}
+		#tray > .active {
+		}
+		#custom-notification {
+		    background-color: #3a3c4e;
+		    border-radius: 0px 0px 6px 6px;
+		    padding: 5px 5px 10px 1px;
+		    margin-left: 5px;
+		    margin-right: 5px;
+		    margin-bottom: 8px;
+		    color: #ea51b2;
+		}
+		#clock {
+		    background-color: #3a3c4e;
+		    color: #f7f7fb;
+		    font-size: 16px;
+		    font-weight: bold;
+		    border-radius: 6px 6px 0px 0px;
+		    padding: 5px 4px 0px 6px;
+		    margin-left: 5px;
+		    margin-right: 5px;
+		}
+		#clock.2 {
+		    color: #f7f7fb;
+		    border-radius: 0px 0px 6px 6px;
+		    padding: 0px 4px 5px 6px;
+		    margin-bottom: 8px;
+		}
+		#custom-power {
+		    background-color: #FF6E67;
+		    border-radius: 6px 6px 6px 6px;
+		    padding: 5px 5px 5px 1px;
+		    margin-left: 5px;
+		    margin-right: 5px;
+		    margin-bottom: 8px;
+		    color: #f7f7fb;
+		}		
+	  

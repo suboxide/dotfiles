@@ -1,0 +1,24 @@
+"$schema" = "https://starship.rs/config-schema.json"
+add_newline = true
+format = "$all"
+scan_timeout = 10
+
+[character]
+error_symbol = "[](bold red)[](bold green)[](bold yellow)"
+success_symbol = "[](bold red)[](bold green)[](bold yellow)"
+
+[nix_shell]
+disabled = false
+format = "via [☃️ $state( ($name))](bold blue) "
+impure_msg = "[impure shell](bold red)"
+pure_msg = "[pure shell](bold green)"
+symbol = " "
+unknown_msg = "[unknown shell](bold yellow)"
+
+[package]
+disabled = true
+
+[sudo]
+disabled = true
+style = "bold green"
+symbol = "🧙 "

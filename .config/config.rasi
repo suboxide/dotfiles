@@ -1,0 +1,24 @@
+configuration {
+click-to-exit: true;
+cycle: true;
+disable-history: false;
+drun-display-format: "{name}";
+drun-match-fields: "name,generic,categories,keywords";
+drun-url-launcher: "xdg-open";
+font: "JetBrainsMono Nerd Font 11";
+hover-select: true;
+icon-theme: "Papirus";
+location: 0;
+matching: "fuzzy";
+modi: "drun,emoji,calc,ssh,filebrowser,run,keys";
+scroll-method: 0;
+show-icons: true;
+sorting-method: "fzf";
+steal-focus: true;
+terminal: "kitty";
+threads: 0;
+window-thumbnail: true;
+xoffset: 0;
+yoffset: 0;
+}
+@theme "custom"
